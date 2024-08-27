@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Question 1
+
+
+    <title>Arithmetic Operations</title>
+    <h1>Arithmetic Operations</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="performArithmetic()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function performArithmetic() {
+            // Get the number from the input field
+            let number = parseFloat(document.getElementById('numberInput').value);
+
+            // Perform arithmetic operations
+            let addition = number + 10;
+            let subtraction = number - 5;
+            let multiplication = number * 2;
+            let division = number / 3;
+            let modulus = number % 4;
+
+            // Display the results
+            document.getElementById('result').innerHTML = `
+                Addition (number + 10): ${addition} <br>
+                Subtraction (number - 5): ${subtraction} <br>
+                Multiplication (number * 2): ${multiplication} <br>
+                Division (number / 3): ${division} <br>
+                Modulus (number % 4): ${modulus}
+            `;
+        }
+    </script> -->
+
+
+
+    <!-- Question 2
+
+
+    <title>JavaScript Variable Output</title>
+    <script>
+        var a = 2, b = 1;
+        var result = --a - --b + ++b + b--;
+
+        console.log("a:", a); // Output: -2
+        console.log("b:", b); // Output: -1
+        console.log("result:", result); // Output: -1
+        var a = 2, b = 1;
+
+        var a = 2, b = 1;
+        --a; // a is decremented by 1
+        --a - --b; // a is decremented by 1, b is decremented by 1
+        --a - --b + ++b; // a is decremented by 1, b is decremented by 1, then b is incremented by 1
+        --a - --b + ++b + b--; // a is decremented by 1, b is decremented by 1, then b is incremented by 1, then b is used and decremented by 1
+    </script> -->
+     
+
+    <!-- Question 3
+
+
+    <title>Greeting Page</title>
+    <h1>Welcome to the Greeting Page</h1>
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput" placeholder="Your name">
+    <button onclick="greetUser()">Greet</button>
+    <h2 id="greetingMessage"></h2>
+
+    <script>
+        function greetUser() {
+            const name = document.getElementById('nameInput').value;
+            const greetingMessage = document.getElementById('greetingMessage');
+            if (name) {
+                greetingMessage.textContent = `Hello, ${name}! Welcome to our website.`;
+            } else {
+                greetingMessage.textContent = 'Please enter your name.';
+            }
+        }
+    </script> -->
+
+
+    <!-- Question 4
+
+    
+    <title>Multiplication Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px 12px;
+            text-align: center;
+        }
+    </style>
+<body>
+    <h1>Multiplication Table</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="generateTable()">Generate Table</button>
+    <table id="multiplicationTable"></table>
+
+    <script>
+        function generateTable() {
+            const number = document.getElementById('numberInput').value || 5;
+            const table = document.getElementById('multiplicationTable');
+            table.innerHTML = '';
+
+            for (let i = 1; i <= 10; i++) {
+                const row = table.insertRow();
+                const cell1 = row.insertCell(0);
+                const cell2 = row.insertCell(1);
+                const cell3 = row.insertCell(2);
+                cell1.textContent = number;
+                cell2.textContent = 'x';
+                cell3.textContent = i;
+                const cell4 = row.insertCell(3);
+                cell4.textContent = number * i;
+            }
+        }
+
+        // Generate default table on page load
+        window.onload = generateTable;
+    </script>
+    </body> -->
+
+    <title>Student Marks</title>
+    <h1>Enter Your Marks</h1>
+    <form id="marksForm">
+        <label for="subject1">Subject 1:</label>
+        <input type="text" id="subject1" name="subject1"><br><br>
+        <label for="marks1">Marks for Subject 1:</label>
+        <input type="number" id="marks1" name="marks1"><br><br>
+        
+        <label for="subject2">Subject 2:</label>
+        <input type="text" id="subject2" name="subject2"><br><br>
+        <label for="marks2">Marks for Subject 2:</label>
+        <input type="number" id="marks2" name="marks2"><br><br>
+        
+        <label for="subject3">Subject 3:</label>
+        <input type="text" id="subject3" name="subject3"><br><br>
+        <label for="marks3">Marks for Subject 3:</label>
+        <input type="number" id="marks3" name="marks3"><br><br>
+        
+        <button type="button" onclick="calculateResults()">Submit</button>
+    </form>
+    
+    <h2>Results</h2>
+    <table border="1">
+        <tr>
+            <th>Subject</th>
+            <th>Marks Obtained</th>
+        </tr>
+        <tr>
+            <td id="subject1Name"></td>
+            <td id="subject1Marks"></td>
+        </tr>
+        <tr>
+            <td id="subject2Name"></td>
+            <td id="subject2Marks"></td>
+        </tr>
+        <tr>
+            <td id="subject3Name"></td>
+            <td id="subject3Marks"></td>
+        </tr>
+        <tr>
+            <td>Total Marks</td>
+            <td id="totalMarks"></td>
+        </tr>
+        <tr>
+            <td>Percentage</td>
+            <td id="percentage"></td>
+        </tr>
+    </table>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
